@@ -112,3 +112,29 @@ svg {
   line-height: 20px;
   margin-right: 20px;
 }
+
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+.record a {
+  text-decoration: none;
+  display: inline-flex;
+  line-height: 20px;
+  margin-right: 20px;
+}
+
+.record .record_num {
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.record img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
