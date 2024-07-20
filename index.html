@@ -33,24 +33,32 @@
 </script>
 
 <body>
-  <div class="content">
-    <h1>Ocean Han</h1>
-    <h2>Hi there 👋</h2>
-    <h2>Glad you found me!</h2>
-    <p>
-      I'm a
-      <span class="sign">software developer</span> currently based in China, I love learning and exploring all
-      interesting
-      skills!
-    </p>
-    <p>
-      I enjoy the process of software development and hope that through the technical
-      implementation more value.
-    </p>
-    <p>I look forward to working with excellent person.</p>
+  <!-- 内容主体 -->
+  <div id="content-container">
+    <div id="content">
+      <h1>Ocean Han</h1>
+      <h2>Hi there 👋</h2>
+      <h2>Glad you found me!</h2>
+      <p>
+        I'm a
+        <span class="sign">software developer</span> currently based in China, I love learning and exploring all
+        interesting
+        skills!
+      </p>
+      <p>
+        I enjoy the process of software development and hope that through the technical
+        implementation more value.
+      </p>
+      <p>I look forward to working with excellent person.</p>
 
-    <p>Outside of programming, I enjoy online games(LOL, PUBG ...) and anime culture.</p>
-    <footer>
+      <p>Outside of programming, I enjoy games(LOL, PUBG, Dying Light ...) and anime culture.</p>
+    </div>
+  </div>
+  <!-- 展示区域 -->
+  <div class="show-area">
+    <div id="typed-area">
+    </div>
+    <div id="concact">
       <p>You can find me through the following ways: </p>
       <div class="link">
         <a href="https://github.com/Ocean-H1" title="github" target="_blank">
@@ -83,6 +91,8 @@
         </a>
 
       </div>
+    </div>
+    <footer>
       <div class="record">
         <a href="https://beian.miit.gov.cn" title="record" target="_blank">
           <img src="./assets/img/record.png" alt="record_img">
@@ -91,6 +101,18 @@
       </div>
     </footer>
   </div>
+
+
 </body>
+
+<!-- Typed.js -->
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  const typed = new Typed('#typed-area', {
+    stringsElement: '#content-container',
+    typeSpeed: 1,
+    showCursor: false
+  })
+</script>
 
 </html>
