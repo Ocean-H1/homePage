@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  user-select: none;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==);
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+:root {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  /* light var */
+  --themeLightFontColor: #2f3542;
+  --themeLightLinkColor: #2f3542;
+  --themeLightSignColor: #81ecec;
+  --themeLightSvgColor: #2f3542;
+  /* dark var */
+  --themeDarkFontColor: #ecf0f1;
+  --themeDarkLinkColor: #ecf0f1;
+  --themeDarkSignColor: #0984e3;
+  --themeDarkSvgColor: #ecf0f1;
+}
+
+@media (prefers-color-scheme: light) {
+
+  h1,
+  h2,
+  p {
+    color: var(--themeLightFontColor);
+  }
+
+  .sign::after {
+    background: var(--themeLightSignColor) !important;
+  }
+
+  a {
+    color: var(--themeLightLinkColor) !important;
+  }
+
+  svg {
+    fill: var(--themeLightSvgColor) !important;
+  }
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+a {
+  color: var(--themeDarkFontColor);
+}

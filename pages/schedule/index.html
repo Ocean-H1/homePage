@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OceanH's Schedule</title>
+  <link rel="stylesheet" href="../../styles/global.css">
+  <link rel="stylesheet" href="./index.css">
+
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/google-calendar/index.global.min.js"></script>
+  <script src="../../constants/secret.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        googleCalendarApiKey: GOOGLE_CALENDAR_APIKEY,
+        initialView: 'timeGridWeek',
+        events: {
+          googleCalendarId: GOOGLE_CALENDAR_ID,
+        },
+
+        headerToolbar: {
+          left: 'prev,next',
+          center: 'title',
+          right: 'timeGridWeek,timeGridDay' // user can switch between the two
+        },
+        eventClick(arg) {
+          arg.jsEvent.preventDefault();
+        },
+        eventContent(renderProps, createElement) {
+          const title = renderProps.event?.title;
+          return createElement('div', {
+            class: 'fc-event-main-frame',
+            innerHTML: `<div class="fc-event-time">${renderProps.timeText}</div><div class="fc-event-title fc-sticky">${title === 'undefined' ? 'Unavailable' : title}</div>`
+          });
+        },
+      });
+
+
+      calendar.render();
+    })
+
+  </script>
+</head>
+
+<body>
+  <div class="calendar-container">
+    <div id="calendar"></div>
+    <p class="tip-info">If there's no event shown, please wait for a few seconds.</p>
+  </div>
+
+
+
+</body>
+
+</html>

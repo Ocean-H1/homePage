@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   user-select: none;
@@ -15,19 +15,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  /* light var */
+
   --themeLightFontColor: #2f3542;
   --themeLightLinkColor: #2f3542;
   --themeLightSignColor: #81ecec;
   --themeLightSvgColor: #2f3542;
-  /* dark var */
+
   --themeDarkFontColor: #ecf0f1;
   --themeDarkLinkColor: #ecf0f1;
   --themeDarkSignColor: #0984e3;
   --themeDarkSvgColor: #ecf0f1;
-}
+} */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 
   h1,
   h2,
@@ -63,7 +63,7 @@ p {
 
 a {
   color: var(--themeDarkFontColor);
-}
+} */
 
 .show-area {
   width: 60%;
