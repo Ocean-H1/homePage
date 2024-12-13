@@ -35,13 +35,16 @@
 
 <body>
   <!-- 内容主体 -->
+  <div class="profile">
+    <div class="fade-in">
+      <div class="overlay"></div>
+      <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar">
+    </div>
+
+    <h1>Ocean Han</h1>
+  </div>
   <div id="content-container">
     <div id="content">
-      <div class="profile">
-        <img src="./assets/img/avatar.jpg" alt="avatar" class="avatar">
-        <h1>Ocean Han</h1>
-      </div>
-
       <h2>Hi there 👋</h2>
       <h2>Glad you found me!</h2>
       <p>
@@ -127,7 +130,27 @@
     stringsElement: '#content-container',
     typeSpeed: 1,
     showCursor: false
-  })
+  });
+
+  const overlayEl = document.querySelector('.overlay');
+  let startTime;
+  const duration = 3000;
+  function fadeInAnimation(currentTime) {
+    startTime = startTime || currentTime;
+    const elapsedTime = currentTime - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
+
+    console.log(progress);
+    overlayEl.style.transform = `translateY(${progress * 100}%)`;
+
+    if (progress < 1) {
+      requestAnimationFrame(fadeInAnimation);
+    } else {
+      overlayEl.style.display = 'none';
+    }
+  }
+
+  requestAnimationFrame(fadeInAnimation);
 </script>
 
 </html>
